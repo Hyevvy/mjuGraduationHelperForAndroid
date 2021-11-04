@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/imgViewBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnReturnCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다른 카테고리 확인하기"/>
+
+        <Button
+            android:id="@+id/btnCheckMajorInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="학과 정보 확인하기"
+            />
+    </LinearLayout>
+</LinearLayout>

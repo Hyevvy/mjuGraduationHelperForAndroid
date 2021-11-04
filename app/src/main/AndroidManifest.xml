@@ -19,6 +19,10 @@
         <activity android:name=".InputInfoActivity" android:label="명지대학교 졸업 도우미" />
         <activity android:name=".categoryActivity" android:label="명지대학교 졸업 도우미" />
         <activity android:name=".ColiberalActivity" android:label="명지대학교 졸업 도우미" />
-     </application>
+        <activity android:name=".LiberalActivity" android:label="명지대학교 졸업 도우미" />
+        <activity android:name=".BaseActivity" android:label="명지대학교 졸업 도우미" />
+        <activity android:name=".MajorActivity" android:label="명지대학교 졸업 도우미" />
+        <activity android:name=".MajorInfoActivity" android:label="명지대학교 졸업 도우미"/>
+    </application>
 
 </manifest>

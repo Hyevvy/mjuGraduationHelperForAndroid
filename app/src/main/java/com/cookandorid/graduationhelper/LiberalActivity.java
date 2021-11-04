@@ -4,42 +4,36 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ColiberalActivity extends AppCompatActivity {
+public class LiberalActivity extends AppCompatActivity {
+//핵심교양 선택시 나타나는 화면
+    ImageView imgViewLiberal;
     Button btnReturnCategory, btnCheckMajorInfo;
-    ImageView imgViewColiberal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coliberal);
+        setContentView(R.layout.activity_liberal);
 
         Intent inIntent = getIntent();
         Bundle datas = inIntent.getExtras();
         String major = datas.getString("major");
         String studentNum = datas.getString("studentNum");
         int studentNumInt = Integer.parseInt(studentNum);
-        imgViewColiberal = (ImageView)findViewById(R.id.imgViewColiberal);
+        imgViewLiberal = (ImageView)findViewById(R.id.imgViewLiberal);
 
         //학번 별로 다른 공통 교양 이미지 출력
-        if(studentNumInt >= 20) {
-            imgViewColiberal.setImageResource(R.drawable.coliberal_aftertwenty);
-        }
-        else if(studentNumInt>=18 && studentNumInt<=19 ){
-            imgViewColiberal.setImageResource(R.drawable.coliberal_eighteen_to_nineteen);
+        if(studentNumInt >= 18) {
+            imgViewLiberal.setImageResource(R.drawable.liberal_aftereigtheen);
         }
         else if(studentNumInt>=15 && studentNumInt<=17 ){
-            imgViewColiberal.setImageResource(R.drawable.coliberal_fifteen_to_seventeen);
+            imgViewLiberal.setImageResource(R.drawable.liberal_fifteen_to_seventeen);
         }
-        else if(studentNumInt==14){
-            imgViewColiberal.setImageResource(R.drawable.coliberal_fourteen);
-        }
-        else if(studentNumInt >= 9 && studentNumInt <= 13){
-            System.out.println("9 - 13");
-            imgViewColiberal.setImageResource(R.drawable.coliberal_nine_to_thirteen);
+        else if(studentNumInt>=9 && studentNumInt<=14 ){
+            imgViewLiberal.setImageResource(R.drawable.liberal_nine_to_fourteen);
         }
 
         btnReturnCategory = (Button)findViewById(R.id.btnReturnCategory);
@@ -60,6 +54,5 @@ public class ColiberalActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

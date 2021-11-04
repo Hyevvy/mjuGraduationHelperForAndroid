@@ -22,6 +22,7 @@
         android:text="다른 카테고리 확인하기"/>
 
     <Button
+        android:id="@+id/btnCheckMajorInfo"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="학과 정보 확인하기"

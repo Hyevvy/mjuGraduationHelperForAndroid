@@ -47,7 +47,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:inputType="none"
-        android:text="컴퓨터공학과"
+        android:text="전공을 선택해주세요"
         android:theme="@style/SpinnerTheme"
         android:spinnerMode="dropdown"
         />

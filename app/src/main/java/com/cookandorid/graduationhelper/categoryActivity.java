@@ -22,8 +22,7 @@ public class categoryActivity extends AppCompatActivity {
         btnBase = (Button)findViewById(R.id.btnBase);
         btnElective = (Button)findViewById(R.id.btnElective);
         btnGeneralLiberal = (Button)findViewById(R.id.btnGeneralLiberal);
-
-
+        btnMajor = (Button)findViewById(R.id.btnMajor);
 
         Intent inIntent = getIntent();
         Bundle datas = inIntent.getExtras();
@@ -44,8 +43,38 @@ public class categoryActivity extends AppCompatActivity {
             }
         });
 
-       
+        //핵심교양이 눌렸을 때
+        btnLiberal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LiberalActivity.class);
+                intent.putExtra("major", major);
+                intent.putExtra("studentNum", studentNum);
+                startActivityForResult(intent, 1002);
+            }
+        });
 
+        //학문 기초가 눌렸을 때
+        btnBase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), BaseActivity.class);
+                intent.putExtra("major", major);
+                intent.putExtra("studentNum", studentNum);
+                startActivityForResult(intent, 1003);
+            }
+        });
+
+        //전공이 눌렸을 때
+        btnMajor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MajorActivity.class);
+                intent.putExtra("major", major);
+                intent.putExtra("studentNum", studentNum);
+                startActivityForResult(intent, 1004);
+            }
+        });
     } 
     //돌아가기 버튼 클릭시 호출되는 콜백함수
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -59,6 +88,16 @@ public class categoryActivity extends AppCompatActivity {
             case 1002:
                 if(resultCode == RESULT_OK){
                     System.out.println("핵심 교양에서 카테고리 확인으로 돌아옴");
+                }
+                break;
+            case 1003:
+                if(resultCode == RESULT_OK){
+                    System.out.println("학문 기초에서 카테고리 확인으로 돌아옴");
+                }
+                break;
+            case 1004:
+                if(resultCode == RESULT_OK){
+                    System.out.println("전공에서 카테고리 확인으로 돌아옴");
                 }
                 break;
         }
