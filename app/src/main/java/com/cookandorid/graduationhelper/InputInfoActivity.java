@@ -37,8 +37,11 @@ public class InputInfoActivity extends AppCompatActivity {
         btnInputSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(etInfo.length()==0){
-                    Toast.makeText(getApplicationContext(), "학번을 입력해주세요" , Toast.LENGTH_LONG).show();
+                if(etInfo.length()==0) {
+                    Toast.makeText(getApplicationContext(), "학번을 입력해주세요", Toast.LENGTH_LONG).show();
+                }
+                else if(Integer.parseInt(etInfo.getText().toString()) <= 8){
+                    Toast.makeText(getApplicationContext(), "09년도 이후 입학생만 사용 가능합니다" , Toast.LENGTH_LONG).show();
                 }
                 else {
                     Intent intent = new Intent(getApplicationContext(), categoryActivity.class);

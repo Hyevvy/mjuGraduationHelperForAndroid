@@ -24,7 +24,9 @@
         android:padding="20dp"
         />
     <EditText
+        android:inputType="number"
         android:id="@+id/editInfo"
+        android:textColorHint="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
