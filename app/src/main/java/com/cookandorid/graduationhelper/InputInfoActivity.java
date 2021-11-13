@@ -40,6 +40,9 @@ public class InputInfoActivity extends AppCompatActivity {
                 if(etInfo.length()==0) {
                     Toast.makeText(getApplicationContext(), "학번을 입력해주세요", Toast.LENGTH_LONG).show();
                 }
+                else if(etInfo.getText().toString() ==""){
+                    System.out.println("여기");
+                }
                 else if(Integer.parseInt(etInfo.getText().toString()) <= 8){
                     Toast.makeText(getApplicationContext(), "09년도 이후 입학생만 사용 가능합니다" , Toast.LENGTH_LONG).show();
                 }

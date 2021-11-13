@@ -32,137 +32,7 @@ import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 public class MajorActivity extends AppCompatActivity {
     ImageView imgViewMajor;
     Button btnReturnCategory, btnCheckMajorInfo;
-//    ArrayList<Major> majorList;
-
-//    private String getJsonString(){
-//        String json = "";
-//        try{
-//            InputStream is = getAssets().open("jsons/majorinfo.json");
-//
-//            int fileSize = is.available();
-//            byte[] buffer = new byte[fileSize];
-//            is.read(buffer);
-//            is.close();
-//            json = new String(buffer,"UTF-8");
-//            Log.d("-- json = ", json);
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return json;
-//    }
-
-//    public class Subject {
-//        public Subject(String subjectName, boolean required, Long score) {
-//            this.subjectName = subjectName;
-//            this.required = required;
-//            this.score = score;
-//        }
-//
-//        public String getSubjectName() {
-//            return subjectName;
-//        }
-//
-//        public Long getScore() {
-//            return score;
-//        }
-//
-//        public void setScore(Long score) {
-//            this.score = score;
-//        }
-//
-//        public boolean isRequired() {
-//            return required;
-//        }
-//
-//        public void setSubjectName(String subjectName) {
-//            this.subjectName = subjectName;
-//        }
-//
-//        public void setRequired(boolean required) {
-//            this.required = required;
-//        }
-//
-//        private String subjectName;
-//        private boolean required;
-//        private Long score;
-//
-//    }
-//
-//
-//    public class Major{
-//        private String majorName;
-//        private String siteUrl;
-//        private String telNumber;
-//        private ArrayList<Subject> subjects = new ArrayList<Subject>();
-//
-//
-//        public Major(String siteUrl, String telNumber, String majorName, ArrayList<Subject> subjects) {
-//            this.siteUrl = siteUrl;
-//            this.telNumber = telNumber;
-//            this.majorName = majorName;
-//            this.subjects = subjects;
-//        }
-//        public ArrayList<Subject>getSubjects(){
-//            return subjects;
-//        }
-//
-//        public void setSubjects(ArrayList<Subject> subjects) {
-//            this.subjects = subjects;
-//        }
-//
-//        public String getMajorName(){
-//            return majorName;
-//        }
-//        public void setMajorName(String majorName){
-//            this.majorName = majorName;
-//        }
-//        public String getSiteUrl(){
-//            return siteUrl;
-//        }
-//        public String getTelNumber(){
-//            return telNumber;
-//        }
-//        public void setSiteUrl(String siteUrl){
-//            this.siteUrl =  siteUrl;
-//        }
-//        public void setTelNumber(String telNumber){
-//            this.telNumber = telNumber;
-//        }
-//    }
-//
-//    public Major jsonParsing() {
-//        try{
-//            JSONObject jsonObject = new JSONObject(getJsonString());
-//            JSONArray majorArray = jsonObject.getJSONArray("majorinfo");
-//
-//            for(int i=0; i<majorArray.length(); i++)
-//            {
-//                JSONObject majorObject = majorArray.getJSONObject(i);
-//
-//
-//                String siteUrl = (String) majorObject.get("siteUrl");
-//                String telNumber = (String) majorObject.get("telNumber");
-//                String majorName = (String) majorObject.get("majorName");
-//
-//                JSONArray jSubjects = (JSONArray) jsonObject.get("subject");
-//                ArrayList<Subject> tList = new ArrayList<Subject>();
-//                for (int j = 0; i < jSubjects.length(); i++) {
-//                    JSONObject t = (JSONObject) jSubjects.get(i);
-//                    Long score = (Long)t.get("score");
-//                    boolean required = (boolean)t.get("required");
-//                    String subjectName = (String)t.get("subjectName");
-//                    tList.add(new Subject(subjectName, required, score));
-//                }
-//
-//                return new Major(siteUrl, telNumber, majorName, tList);
-//            }
-//        }catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//        return new Major(null, null, null, null);
-//    }
-//
+    String siteUrl, telNumber;
     JSONObject jsonObject;
     JSONArray Array;
     public JSONObject getJson(String fileName){
@@ -224,7 +94,8 @@ public class MajorActivity extends AppCompatActivity {
             //배열로된 자료를 가져올때
             try {
                 Array = ret.getJSONArray("subject");//배열의 이름
-                ArrayList<LinearLayout> row = new ArrayList<LinearLayout>();
+                telNumber = ret.getString("telNumber");
+                siteUrl = ret.getString("siteUrl");
 
                 Button btn;
                 for(int i=0; i<Array.length(); i++) {
@@ -269,7 +140,8 @@ public class MajorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MajorInfoActivity.class);
-                intent.putExtra("major", major);
+                intent.putExtra("telNumber", telNumber);
+                intent.putExtra("siteUrl", siteUrl);
                 startActivity(intent);
             }
         });

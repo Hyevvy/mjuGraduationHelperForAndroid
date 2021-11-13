@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="학과 사이트와 전화번호가 출력됩니다"/>
+        android:text="학과 사이트"
+        android:background="#ffffcc"
+        android:textSize="28sp"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/tvSiteUrl"
+        android:linksClickable="true"
+        android:autoLink="web"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="학과 전화번호"
+        android:textSize="28sp"
+        android:background="#ffffcc"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTelNumber"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+
 </LinearLayout>
