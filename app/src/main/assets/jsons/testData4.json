@@ -1,0 +1,222 @@
+{
+  "majorName": "신소재공학과",
+  "siteUrl": "https://mse.mju.ac.kr/mse/index.do",
+  "telNumber": "031-330-6457",
+  "subject": [
+    {
+      "subjectName": "공학입문설계",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "신소재공학입문",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "세라믹재료개론",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "유기재료개론",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "재료과학및공학1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "신소재실험",
+      "required": true,
+      "score": 2
+    },
+    {
+      "subjectName": "금속재료개론",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "기초물리화학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "재료과학및공학2",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "신소재실험2",
+      "required": true,
+      "score": 2
+    },
+    {
+      "subjectName": "금속열처리개론",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "세라믹구조재료",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체공정",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "신소재실험3",
+      "required": true,
+      "score": 2
+    },
+    {
+      "subjectName": "전자세라믹스",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "컴퓨터재료모델링",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "상평학론",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "이차전지소재",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전자재료",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "X-Ray결정학",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "재료상변태",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "재료열물성",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "신소재실험4",
+      "required": true,
+      "score": 2
+    },
+    {
+      "subjectName": "디스플레이재료",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "캡스톤디자인1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "기능성소재",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "캡스톤디자인2",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "결정학개론",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "연료전기배터리재료",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "금속소재공정",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "고온재료",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "복합재료공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "소경공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "나노재료와 창업",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "재료분석",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합창의공학설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "벤처창업과사업성평가",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "공학도를위한온디맨드경영",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "공학도를위한경력설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합캡스톤디자인프로젝트",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합캡스톤디자인1",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합캡스톤디자인2",
+      "required": false,
+      "score": 3
+    }
+  ]
+}

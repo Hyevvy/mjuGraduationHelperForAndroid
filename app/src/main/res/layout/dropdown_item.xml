@@ -7,4 +7,5 @@
     android:padding="14dp"
     android:textColor="@color/black"
     android:textSize="16dp"
+    android:fontFamily="@font/bmdohyun"
     xmlns:android="http://schemas.android.com/apk/res/android" />

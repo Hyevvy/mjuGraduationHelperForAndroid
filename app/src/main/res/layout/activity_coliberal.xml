@@ -4,10 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imgViewColiberal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,13 +16,19 @@
         android:id="@+id/btnReturnCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bmdohyun"
         android:text="다른 카테고리 확인하기"/>
 
     <Button
         android:id="@+id/btnCheckMajorInfo"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/bmdohyun"
         android:text="학과 정보 확인하기"
         />
     </LinearLayout>
+    <ImageView
+        android:id="@+id/imgViewColiberal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

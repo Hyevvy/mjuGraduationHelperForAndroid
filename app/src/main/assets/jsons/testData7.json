@@ -1,0 +1,172 @@
+{
+  "majorName": "교통공학과",
+  "siteUrl": "http://jw4.mju.ac.kr/user/mjtrans/index.action",
+  "telNumber": "031-330-6976",
+  "subject": [
+    {
+      "subjectName": "교통공학개론",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "공학입문설계",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "교통조사",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통운영과학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통류이론",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "도시계획",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통안전1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "교통안전공학설계",
+      "required": true,
+      "score": 1
+    },
+    {
+      "subjectName": "교통용량",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "기계신입생세미나",
+      "required": false,
+      "score": 1
+    },
+    {
+      "subjectName": "교통계획1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "교통시설공학",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "교통시설공학설계",
+      "required": true,
+      "score": 1
+    },
+    {
+      "subjectName": "교통운영관리1",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통안전2",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "도로공학1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "도로설계",
+      "required": true,
+      "score": 1
+    },
+    {
+      "subjectName": "교통운영관리2",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "교통운영설계",
+      "required": true,
+      "score": 1
+    },
+    {
+      "subjectName": "교통계획2",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통경제",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "도로공학2",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통법규",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통계획설계",
+      "required": true,
+      "score": 2
+    },
+    {
+      "subjectName": "캡스톤디자인1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "지능형교통체계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "지속가능교통",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통영향분석및설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "캡스톤디자인2",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "철도공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "도로관리",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "도시대중교통",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "교통기술과창업",
+      "required": false,
+      "score": 3
+    }
+  ]
+}

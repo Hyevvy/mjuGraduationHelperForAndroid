@@ -1,0 +1,183 @@
+{
+  "majorName": "전기공학과",
+  "siteUrl": "https://elec.mju.ac.kr/sites/elec/index.do",
+  "telNumber": "031-330-6971",
+  "subject": [
+    {
+      "subjectName": "공학입문설계",
+      "required": true,
+      "score": 3
+    },
+
+    {
+      "subjectName": "디지털논리회로",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "회로이론1",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "수치해석",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전기회로실험1",
+      "required": true,
+      "score": 1
+    },
+    {
+      "subjectName": "디지털논리회로실험",
+      "required": true,
+      "score": 1
+    },
+    {
+      "subjectName": "전기자기학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "회로이론2",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "신호및시스템",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전기회로실험2",
+      "required": true,
+      "score": 1
+    },
+    {
+      "subjectName": "데이터구조및응용",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전자기기1",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체물성",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전력시스템공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전력전자공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전자회로",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "제어공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합프로젝트2",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "컴퓨터응용",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전력전자시스템설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "마이크로프로세서",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "현대제어",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체소자",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전기기기2",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "제어시스템설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "캡스톤디자인1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "배전자동화",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전기설비",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전력변환기응용",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "캡스톤디자인2",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "산업전력시스템",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "에너지변화공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "임베디드로보틱스",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전기전자재료",
+      "required": false,
+      "score": 3
+    }
+  ]
+}

@@ -22,6 +22,8 @@ public class LiberalActivity extends AppCompatActivity {
         Bundle datas = inIntent.getExtras();
         String major = datas.getString("major");
         String studentNum = datas.getString("studentNum");
+        String siteUrl = datas.getString("siteUrl");
+        String telNumber = datas.getString("telNumber");
         int studentNumInt = Integer.parseInt(studentNum);
         imgViewLiberal = (ImageView)findViewById(R.id.imgViewLiberal);
 
@@ -51,6 +53,8 @@ public class LiberalActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MajorInfoActivity.class);
                 intent.putExtra("major", major);
+                intent.putExtra("siteUrl",siteUrl);
+                intent.putExtra("telNumber", telNumber);
                 startActivity(intent);
             }
         });

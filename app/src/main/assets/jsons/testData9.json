@@ -1,0 +1,173 @@
+{
+    "majorName": "산업경영공학과",
+    "siteUrl": "https://ie.mju.ac.kr/ie/index.do,",
+    "telNumber": "031 - 330 - 6954",
+    "subject": [
+        {
+            "subjectName": "산업경영공학개론",
+            "required": false,
+            "score": 3
+        },
+
+        {
+            "subjectName": "공학입문설계",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "생산관리",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "제품설계및제조",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "인간공학및작업관리",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "산업경영통계",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "경제성공학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "생산계획및통제",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "원가회계",
+            "required": false,
+            "score": 1
+        },
+        {
+            "subjectName": "경영과학1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "품질관리",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "물류관리",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "제4차산업혁명기술융합",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "데이터마이닝",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "마케팅애널리틱스",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "데이터애널리틱스",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "시뮬레이션",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "데이터베이스",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "스마트생산과자동화",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "실험계획법",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "SCM",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "캡스톤디자인",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "경영혁신",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "MIS",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "정보시스템분석및설계",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "프로젝트관리",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "신뢰성공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "산업경영알고리즘",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "ERP",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "전자상거래",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "기술경영",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "경영과학2",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "산업경영공학실습",
+            "required": false,
+            "score": 3
+        }
+    ]
+}

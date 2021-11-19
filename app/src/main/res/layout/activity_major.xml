@@ -18,14 +18,18 @@
 
         <Button
             android:id="@+id/btnReturnCategory"
+            android:fontFamily="@font/bmdohyun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="다른 카테고리 확인하기"/>
 
         <Button
             android:id="@+id/btnCheckMajorInfo"
+            android:fontFamily="@font/bmdohyun"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_margin="10dp"
             android:text="학과 정보 확인하기"
             />
 
@@ -36,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="들은 과목을 모두 선택해주세요"
-
+        android:padding="15dp"
+        android:id="@+id/tvMent"
         android:background="#ffffcc"
         android:textSize="25sp"
         android:gravity="center"

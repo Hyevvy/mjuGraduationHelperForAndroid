@@ -1,0 +1,188 @@
+{
+  "majorName": "화학공학과",
+  "siteUrl": "https://chemeng.mju.ac.kr/chemeng/index.do",
+  "telNumber": "031-330-6969",
+  "subject": [
+    {
+      "subjectName": "공학입문설계",
+      "required": true,
+      "score": 3
+    },
+
+    {
+      "subjectName": "화학공학개론",
+      "required": true,
+      "score": 2
+    },
+    {
+      "subjectName": "물리화학",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "화공양론1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "유기화학",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "화학공학기초실험",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "화공양론2",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "응용유기화학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "화공전산",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "화학공학기초실험2",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "열역학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "화학반응공학",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "공정유체역학",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "고분자공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "무기및재료화학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "공정제어",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "열및물질전달",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "촉매반응공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "화학공학실험1",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "화공안전공학",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "캡스톤디자인1",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "분리공정",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "제품및공정설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "화공세미나",
+      "required": false,
+      "score": 1
+    },
+    {
+      "subjectName": "화학공학실험2",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "화공인공지능활용",
+      "required": false,
+      "score": 2
+    },
+    {
+      "subjectName": "캡스톤디자인2",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "기기분석",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "생물화학공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "디스플레이공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체화학공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합창의공학설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "벤처창업과사업성평가",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "공학도를위한온디맨드경영",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "공학도를위한경력설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합캡스톤디자인프로젝트",
+      "required": false,
+      "score": 3
+    }
+  ]
+}
