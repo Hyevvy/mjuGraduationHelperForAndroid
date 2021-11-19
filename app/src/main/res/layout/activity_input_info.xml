@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="입학연도와 전공을 선택해주세요."
-        android:textSize="20dp"
+        android:textSize="25sp"
         android:gravity="center"
         android:padding="20dp"
         android:background="#ffffcc"
@@ -19,25 +20,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="입학연도"
-        android:textSize="20dp"
+        android:textSize="23sp"
         android:gravity="center"
         android:padding="20dp"
         />
     <EditText
-        android:inputType="number"
+        android:inputType="text"
         android:id="@+id/editInfo"
         android:textColorHint="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:font="@font/bmhanapro"
+        android:fontFamily="@font/bmdohyun"
         android:hint="2020년 -> 20" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="현재 이수하고 있는 전공"
-        android:textSize="20dp"
+        android:textSize="23sp"
         android:gravity="center"
         android:padding="20dp"
         />
@@ -47,39 +48,23 @@
         android:layout_width="396dp"
         android:layout_height="54dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:inputType="none"
         android:text="전공을 선택해주세요"
+        android:fontFamily="@font/bmdohyun"
         android:theme="@style/SpinnerTheme"
-        android:spinnerMode="dropdown"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:layout_marginEnd="32dp">-->
-
-<!--        <AutoCompleteTextView-->
-<!--            android:id="@+id/autoCompleteTextView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_weight="1"-->
-<!--            android:inputType="none"-->
-<!--            android:text="컴퓨터공학과"-->
-<!--            />-->
-
-<!--        ></com.google.android.material.textfield.TextInputLayout>-->
+        android:spinnerMode="dropdown" />
 
     <Button
         android:layout_margin="10dp"
         android:id="@+id/btnInfoSubmit"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textSize="20dp"
+        android:textSize="23sp"
         android:text="선택 완료"
+        android:fontFamily="@font/bmdohyun"
         android:layout_gravity="center"
         />
 

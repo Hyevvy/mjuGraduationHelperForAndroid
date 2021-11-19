@@ -1,0 +1,219 @@
+{
+    "majorName": "환경에너지공학과",
+    "siteUrl": "https://3e.mju.ac.kr/3e/index.do",
+    "telNumber": "031 - 330 - 6686",
+    "subject": [
+        {
+            "subjectName": "환경에너지공학개론",
+            "required": false,
+            "score": 2
+        },
+
+        {
+            "subjectName": "공학입문설계",
+            "required": true,
+            "score": 1
+        },
+        {
+            "subjectName": "환경화학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "환경미생물학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "환경미생물학실험",
+            "required": true,
+            "score": 2
+        },
+        {
+            "subjectName": "물질및에너지수지",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "환경분석화학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "환경분석실험",
+            "required": true,
+            "score": 2
+        },
+        {
+            "subjectName": "환경유체역학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "[대기]대기환경공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "[물환경]물리화학적폐수처리",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "[대기]대기오염제어공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "수처리실험",
+            "required": true,
+            "score": 2
+        },
+        {
+            "subjectName": "[물환경]생물학적폐수처리",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경정책및법규",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "[폐기물]폐기물에너지공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경수리학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "에너지이동현상",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경사물인터넷",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "[대기]대기폐기물실험",
+            "required": true,
+            "score": 2
+        },
+        {
+            "subjectName": "환경에너지공학세미나",
+            "required": false,
+            "score": 1
+        },
+        {
+            "subjectName": "[폐기물]폐기물처리공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "상하수도공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "[환경영향평가]수질관리모델",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경보건학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "산업안전공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "캡스톤디자인1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "[환경영향평가]환경영향평가",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "정수처리공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "신재생에너지공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "바이오에너지공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경반응공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경빅데이터",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "캡스톤디자인2",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "산업폐수처리공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경수문학",
+            "required": false,
+            "score": 2
+        },
+        {
+            "subjectName": "분리공정",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "전과정평가",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경기술과창업",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "대기화학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "환경인공지능",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "[물산업]장기현장학습",
+            "required": false,
+            "score": 12
+        }
+    
+    ]
+}

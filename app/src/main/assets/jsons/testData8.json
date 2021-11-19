@@ -1,0 +1,209 @@
+{
+    "majorName": "기계공학과",
+    "siteUrl": "https://me.mju.ac.kr/me/index.do",
+    "telNumber": "031 - 330 - 6955",
+    "subject": [
+        {
+            "subjectName": "기계신입생세미나",
+            "required": false,
+            "score": 1
+        },
+
+        {
+            "subjectName": "공학입문설계",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "정역학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "고체역학1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "열역학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "CAD1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "기구학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "기계재료학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "전자공학입문",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "기계공작법",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "동역학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "고체역학2",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "전기전자공학개론및실습",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "CAD2",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "기계공학실험1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "기계진동학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "열전달1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "유체역학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "기계요소설계",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "기계공학세미나",
+            "required": true,
+            "score": 1
+        },
+        {
+            "subjectName": "기계공학실험2",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "FEM",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "기계설계",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "유체시스템설계",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "기계시스템제어",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "열전달2",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "스마트기계마이크로프로세서응용",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "캡스톤디자인1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "마이크로메카트로닉스",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "기계공학특론",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "창업밎제조실무",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "CAD/CAM",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "스마트팩토리",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "스마트자동차",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "지능형센서및계층공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "캡스톤디자인2",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "기계공학에서의인공지능",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "냉동및공기조화",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "자동차공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "지능로봇",
+            "required": false,
+            "score": 3
+        }
+
+    ]
+}

@@ -1,0 +1,228 @@
+{
+  "majorName": "전자공학과",
+  "siteUrl": "http://jw4.mju.ac.kr/user/ee/index.action",
+  "telNumber": "031-330-6971",
+  "subject": [
+    {
+      "subjectName": "공학입문설계",
+      "required": true,
+      "score": 3
+    },
+
+    {
+      "subjectName": "디지털논리회로",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "고급C언어",
+      "required": true,
+      "score": 2
+    },
+    {
+      "subjectName": "회로이론",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "전기자기학",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "컴퓨터구조",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "기계공학입문",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "회로실험",
+      "required": true,
+      "score": 1
+    },
+    {
+      "subjectName": "반도체공학",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "지능형센서응용",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "자료구조",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합창의공학설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "벤처창업과사업성평가",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "공학도를위한온디맨드",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "공학도를위한경력설계",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "전자회로",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "전자회로실험",
+      "required": false,
+      "score": 1
+    },
+    {
+      "subjectName": "마이크로공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체소자",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "신호및시스템",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "컴퓨터그래픽스",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "마이크로프로세서응용",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "통신공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "RF회로",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "CMOS소자공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "디지털시스템",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "디지탈신호처리",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "컴퓨터비전시스템",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "임베디스시스템",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "캡스톤디자인",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "캡스톤디자인2",
+      "required": true,
+      "score": 3
+    },
+    {
+      "subjectName": "머신러닝",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체장비실습",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "디지털통신",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체패키징",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "시스템온칩",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "IOT",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "의용전자공학",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "컴퓨터통신망",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "광통신",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "반도체장비",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합캡스톤디자인프로젝트",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합캡스톤디자인",
+      "required": false,
+      "score": 3
+    },
+    {
+      "subjectName": "융합프로젝트",
+      "required": false,
+      "score": 3
+    }
+  ]
+}

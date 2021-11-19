@@ -1,0 +1,164 @@
+{
+    "majorName": "토목환경공학과",
+    "siteUrl": "https://civil.mju.ac.kr/sites/civil/index.do",
+    "telNumber": "031 - 330 - 6406",
+    "subject": [
+        {
+            "subjectName": "공학입문설계",
+            "required": true,
+            "score": 3
+        },
+
+        {
+            "subjectName": "정역학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "구조역학1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "유체역학1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "토목설계기초",
+            "required": true,
+            "score": 1
+        },
+        {
+            "subjectName": "재료역학",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "유체역학2",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "토질역학1및실험",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "구조역학2",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "수리학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "콘크리트및실험",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "토질역학2및실험",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "측량학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "건설관리",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "강구조공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "수문학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "콘크리트구조설계",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "기초공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "GIS",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "전산구조공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "PS콘크리트",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "도로및철도공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "강구조설계",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "지반구조물설계",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "캡스톤디자인1",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "상하수도공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "교량공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "해안항만공학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "캡스톤디자인2",
+            "required": true,
+            "score": 3
+        },
+        {
+            "subjectName": "구조동역학",
+            "required": false,
+            "score": 3
+        },
+        {
+            "subjectName": "BIM",
+            "required": false,
+            "score": 3
+        }
+    
+    ]
+}

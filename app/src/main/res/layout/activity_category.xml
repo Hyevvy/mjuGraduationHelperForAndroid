@@ -2,47 +2,93 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="카테고리를 하나만 선택해주세요" />
+        android:text="카테고리를 하나만 선택해주세요"
+        android:background="#ffffcc"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:padding="15dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:id="@+id/btnColiberal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="공통 교양"
+            android:fontFamily="@font/bmdohyun"
+            ></Button>
+        <Button
+            android:id="@+id/btnLiberal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="핵심 교양"
+            android:fontFamily="@font/bmdohyun"
+            ></Button>
 
-    <Button
-        android:id="@+id/btnColiberal"
-        android:layout_width="wrap_content"
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="공통 교양"
-        ></Button>
-    <Button
-        android:id="@+id/btnLiberal"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:layout_margin="20dp"
+            android:id="@+id/btnBase"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="학문 기초"
+            android:fontFamily="@font/bmdohyun"
+            ></Button>
+        <Button
+            android:id="@+id/btnMajor"
+            android:layout_margin="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="전공"
+            android:fontFamily="@font/bmdohyun"
+            ></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="핵심 교양"
-        ></Button>
-    <Button
-        android:id="@+id/btnBase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="학문 기초"
-        ></Button>
-    <Button
-        android:id="@+id/btnMajor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="전공"
-        ></Button>
-    <Button
-        android:id="@+id/btnElective"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="자유 선택"
-        ></Button>
-    <Button
-        android:id="@+id/btnGeneralLiberal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="일반교양"
-        ></Button>
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:id="@+id/btnElective"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="자유 선택"
+            android:fontFamily="@font/bmdohyun"
+            ></Button>
+        <Button
+            android:id="@+id/btnGeneralLiberal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="일반교양"
+            android:fontFamily="@font/bmdohyun"
+            ></Button>
+    </LinearLayout>
 </LinearLayout>
