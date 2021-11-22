@@ -44,6 +44,7 @@
        />
     <CheckBox
         android:text="공학인증을 하고 있음"
+        android:fontFamily="@font/bmdohyun"
         android:id="@+id/checkBox"
         android:textSize="20sp"
         android:layout_width="match_parent"

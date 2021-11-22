@@ -43,10 +43,16 @@ public class MajorActivity extends AppCompatActivity {
     Integer completedScore = 0;//총 이수학점
     LinearLayout  majorResultLayout;
     boolean isResultPage = false;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_major);
+
+
+
+
 
         btnReturnCategory = (Button)findViewById(R.id.btnReturnCategory);
         tvMent = (TextView)findViewById(R.id.tvMent);
@@ -69,7 +75,7 @@ public class MajorActivity extends AppCompatActivity {
         String siteUrl = datas.getString("siteUrl");
         int studentNumInt = Integer.parseInt(studentNum);
         Toast.makeText(getApplicationContext(),major,Toast.LENGTH_LONG).show();
-        LayoutParams params = new LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+        LayoutParams params = new LayoutParams(MATCH_PARENT, WRAP_CONTENT);
             //배열로된 자료를 가져올때
             try {
                 Array = array;
@@ -79,7 +85,8 @@ public class MajorActivity extends AppCompatActivity {
 
                         btn = new Button(this);
                         btn.setText(subjects.getString("subjectName"));
-                    Log.d("-- Subject is ", subjects.getString("subjectName"));
+
+                        Log.d("-- Subject is ", subjects.getString("subjectName"));
                         btn.setId(count);
                         count++;
                         btn.setLayoutParams(params);
