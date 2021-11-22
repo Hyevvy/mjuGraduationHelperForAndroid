@@ -35,18 +35,19 @@ import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
 public class MajorActivity extends AppCompatActivity {
     ImageView imgViewMajor;
-    Button btnReturnCategory, btnCheckMajorInfo;
+    Button btnReturnCategory, btnCheckMajorInfo, btnMajorInit, btnMajorSubmit;
     String siteUrl, telNumber;
     JSONObject jsonObject;
     JSONArray Array, array;
-    TextView tvMent;
-
+    TextView tvMent, tvAdditionalScore, tvAdditionalSubjects;
+    Integer completedScore = 0;//총 이수학점
+    LinearLayout  majorResultLayout;
+    boolean isResultPage = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_major);
 
-        imgViewMajor = (ImageView)findViewById(R.id.imgViewMajor);
         btnReturnCategory = (Button)findViewById(R.id.btnReturnCategory);
         tvMent = (TextView)findViewById(R.id.tvMent);
         LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
@@ -93,11 +94,21 @@ public class MajorActivity extends AppCompatActivity {
                                 Drawable cor = tvMent.getBackground();
                                 Drawable btnColor = finalBtn.getBackground();
                                 Drawable layerColor = layout.getBackground();
-
+                            try {
+                                Integer thisScore = Integer.parseInt(subjects.getString("score"));
                                 if(cor == btnColor){
                                     finalBtn.setBackground(layerColor);
+                                    completedScore -= thisScore;
                                 }
-                                else finalBtn.setBackground(cor);
+                                else {
+                                    finalBtn.setBackground(cor);
+                                    completedScore += thisScore;
+                                }
+                                Log.d("-- completedScore is ", completedScore.toString());
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
 
                         }
                     });
@@ -134,5 +145,67 @@ public class MajorActivity extends AppCompatActivity {
             }
         });
 
+        btnMajorInit = (Button)findViewById(R.id.btnMajorInit);
+        btnMajorSubmit = (Button)findViewById(R.id.btnMajorSubmit);
+
+        //초기화 버튼 누름
+        Drawable layerColor = layout.getBackground();
+
+        btnMajorInit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                completedScore = 0; //들었던 학점 초기화
+                
+                //check했던 과목 다 해제하기
+                LinearLayout parentLayout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
+                int childs = parentLayout.getChildCount();
+                View v = null;
+                for(int i=0; i<childs; i++) {
+                    v = parentLayout.getChildAt(i);
+                    v.setBackground(layerColor);
+                    //do something with your child element
+                }
+            }
+        });
+
+
+        tvAdditionalScore=(TextView)findViewById(R.id.tvAdditionalScore);
+        tvAdditionalSubjects=(TextView)findViewById(R.id.tvAdditionalSubjects);
+        majorResultLayout = (LinearLayout)findViewById(R.id.majorResultLayout);
+
+
+        btnMajorSubmit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                //TODO : 추가로 들어야하는 학점, 추가로 들어야하는 과목 출력
+
+                if(isResultPage == false){
+                    isResultPage = true;
+                    btnReturnCategory.setVisibility(INVISIBLE);
+                    btnCheckMajorInfo.setVisibility(INVISIBLE);
+                    tvMent.setVisibility(INVISIBLE);
+                    btnMajorInit.setVisibility(GONE);
+                    layout.setVisibility(GONE);
+                    majorResultLayout.setVisibility(VISIBLE);
+                    btnMajorSubmit.setText("뒤로 가기");
+
+                    tvAdditionalScore.setText("필수 요구학점(아직 안 받음)- "+ completedScore);
+                    tvAdditionalSubjects.setText("아직 계산 안 했음");
+                    // btnMajorSubmit.setVisibility(INVISIBLE);
+                }
+                else {
+                    //다시 원래 전공페이지로 돌려놓음
+                    isResultPage = false;
+                    btnReturnCategory.setVisibility(VISIBLE);
+                    btnCheckMajorInfo.setVisibility(VISIBLE);
+                    tvMent.setVisibility(VISIBLE);
+                    btnMajorInit.setVisibility(VISIBLE);
+                    layout.setVisibility(VISIBLE);
+                    majorResultLayout.setVisibility(GONE);
+                    btnMajorSubmit.setText("선택 완료");
+                }
+
+            }
+        });
     }
 }

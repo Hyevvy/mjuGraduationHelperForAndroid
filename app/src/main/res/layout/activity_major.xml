@@ -5,10 +5,6 @@
     android:gravity="center_horizontal"
     android:id="@+id/layout_activity_major"
     android:orientation="vertical">
-    <ImageView
-        android:id="@+id/imgViewMajor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,6 +46,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:id="@+id/majorScroll"
         >
 
@@ -61,6 +58,62 @@
             >
 
         </LinearLayout>
+
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/majorResultLayout"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="추가로 들어야 할 학점은 "
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAdditionalScore"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="추가로 들어야 할 과목은 "
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAdditionalSubjects"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btnMajorInit"
+            android:fontFamily="@font/bmdohyun"
+            android:text="초기화"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/bmdohyun"
+            android:id="@+id/btnMajorSubmit"
+            android:text="선택 완료"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>
