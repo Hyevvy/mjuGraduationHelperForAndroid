@@ -38,19 +38,19 @@ public class BaseActivity extends AppCompatActivity {
                 if(studentNumInt >= 18)
                     fileString = "base_" + i;
                 else{
-                    if(i == 9) { //컴공일때
-                        if (studentNumInt >= 18) {
-                            fileString = "base_" + i;
-                        } else if (studentNumInt >= 15 && studentNumInt <= 17) {
-                            imgViewBase.setImageResource(R.drawable.base_fifteen_to_seventeen_cs);
-                        } else if (studentNumInt >= 12 && studentNumInt <= 14) {
-                            imgViewBase.setImageResource(R.drawable.base_twelve_to_fourteen_cs);
-                        } else if (studentNumInt >= 10 && studentNumInt <= 11) {
-                            imgViewBase.setImageResource(R.drawable.base_ten_to_eleven_cs);
-                        } else if (studentNumInt == 9) {
-                            imgViewBase.setImageResource(R.drawable.base_nine_cs);
-                        }
-                    }
+//                    if(i == 9) { //컴공일때
+//                        if (studentNumInt >= 18) {
+//                            fileString = "base_" + i;
+//                        } else if (studentNumInt >= 15 && studentNumInt <= 17) {
+//                            imgViewBase.setImageResource(R.drawable.base_fifteen_to_seventeen_cs);
+//                        } else if (studentNumInt >= 12 && studentNumInt <= 14) {
+//                            imgViewBase.setImageResource(R.drawable.base_twelve_to_fourteen_cs);
+//                        } else if (studentNumInt >= 10 && studentNumInt <= 11) {
+//                            imgViewBase.setImageResource(R.drawable.base_ten_to_eleven_cs);
+//                        } else if (studentNumInt == 9) {
+//                            imgViewBase.setImageResource(R.drawable.base_nine_cs);
+//                        }
+//                    }
                 }
             }
             System.out.println(fileString);
@@ -60,19 +60,19 @@ public class BaseActivity extends AppCompatActivity {
         if(studentNumInt >= 18) {
             imgViewBase.setImageResource(R.drawable.base_aftereighteen);
         }
-        else if(studentNumInt>=15 && studentNumInt<=17 ){
-            imgViewBase.setImageResource(R.drawable.base_fifteen_to_seventeen_cs);
-        }
-        else if(studentNumInt>=12 && studentNumInt<=14){
-            imgViewBase.setImageResource(R.drawable.base_twelve_to_fourteen_cs);
-        }
-        else if(studentNumInt>=10 && studentNumInt<=11 ){
-            imgViewBase.setImageResource(R.drawable.base_ten_to_eleven_cs);
-        }
-
-        else if(studentNumInt == 9){
-            imgViewBase.setImageResource(R.drawable.base_nine_cs);
-        }
+//        else if(studentNumInt>=15 && studentNumInt<=17 ){
+//            imgViewBase.setImageResource(R.drawable.base_fifteen_to_seventeen_cs);
+//        }
+//        else if(studentNumInt>=12 && studentNumInt<=14){
+//            imgViewBase.setImageResource(R.drawable.base_twelve_to_fourteen_cs);
+//        }
+//        else if(studentNumInt>=10 && studentNumInt<=11 ){
+//            imgViewBase.setImageResource(R.drawable.base_ten_to_eleven_cs);
+//        }
+//
+//        else if(studentNumInt == 9){
+//            imgViewBase.setImageResource(R.drawable.base_nine_cs);
+//        }
 
         btnReturnCategory = (Button)findViewById(R.id.btnReturnCategory);
 
