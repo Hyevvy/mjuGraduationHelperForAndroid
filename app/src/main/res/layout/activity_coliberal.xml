@@ -5,7 +5,6 @@
     android:layout_height="match_parent">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bmdohyun"
+        android:layout_margin="10dp"
         android:text="다른 카테고리 확인하기"/>
 
     <Button
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:fontFamily="@font/bmdohyun"
+        android:layout_margin="10dp"
         android:text="학과 정보 확인하기"
         />
     </LinearLayout>

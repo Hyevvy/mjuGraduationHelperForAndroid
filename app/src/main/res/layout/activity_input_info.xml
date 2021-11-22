@@ -27,13 +27,29 @@
     <EditText
         android:inputType="text"
         android:id="@+id/editInfo"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/gray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/bmdohyun"
         android:hint="2020년 -> 20" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="공학인증 여부를 선택해주세요"
+        android:textSize="23sp"
+        android:gravity="center"
+        android:padding="20dp"
+       />
+    <CheckBox
+        android:text="공학인증을 하고 있음"
+        android:id="@+id/checkBox"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

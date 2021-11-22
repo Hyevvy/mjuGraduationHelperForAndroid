@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class categoryActivity extends AppCompatActivity {
-    Button btnColiberal, btnLiberal, btnBase, btnMajor, btnElective, btnGeneralLiberal;
+    Button btnColiberal, btnLiberal, btnBase, btnMajor, btnFree, btnGeneralLiberal;
     JSONObject jsonObject;
     JSONArray Array;
     String siteUrl, telNumber;
@@ -54,7 +54,7 @@ public class categoryActivity extends AppCompatActivity {
         btnColiberal = (Button)findViewById(R.id.btnColiberal);
         btnLiberal = (Button)findViewById(R.id.btnLiberal);
         btnBase = (Button)findViewById(R.id.btnBase);
-        btnElective = (Button)findViewById(R.id.btnElective);
+        btnFree = (Button)findViewById(R.id.btnFree);
         btnGeneralLiberal = (Button)findViewById(R.id.btnGeneralLiberal);
         btnMajor = (Button)findViewById(R.id.btnMajor);
 
@@ -63,7 +63,7 @@ public class categoryActivity extends AppCompatActivity {
         String major = datas.getString("major");
         String studentNum = datas.getString("studentNum");
         Integer idx = datas.getInt("retIdx") + 1;
-
+        Boolean isAbeek = datas.getBoolean("isAbeek");
 
         JSONObject ret = getJson("jsons/testData" + idx +".json");
         try{
@@ -130,6 +130,22 @@ public class categoryActivity extends AppCompatActivity {
                 startActivityForResult(intent, 1004);
             }
         });
+
+        //자유 선택이 눌렸을 때
+        btnFree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), FreeActivity.class);
+                intent.putExtra("major", major);
+                intent.putExtra("jsonArray", Array.toString());
+                intent.putExtra("studentNum", studentNum);
+                intent.putExtra("siteUrl",siteUrl);
+                intent.putExtra("telNumber", telNumber);
+                intent.putExtra("isAbeek", isAbeek);
+                startActivityForResult(intent, 1005);
+            }
+        });
+
     } 
     //돌아가기 버튼 클릭시 호출되는 콜백함수
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

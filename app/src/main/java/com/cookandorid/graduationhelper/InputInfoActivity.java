@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,10 +24,22 @@ public class InputInfoActivity extends AppCompatActivity {
     EditText etInfo;
     String retMajor;
     Integer retIdx;
+    CheckBox checkBox;
+    boolean isAbeek = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_info);
+        checkBox = (CheckBox)findViewById(R.id.checkBox);
+
+        //공학인증 여부 확인
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                isAbeek = b;
+                System.out.println(isAbeek);
+            }
+        });
 
         etInfo = (EditText)findViewById(R.id.editInfo);
         btnInputSubmit = (Button)findViewById(R.id.btnInfoSubmit);
@@ -49,13 +63,12 @@ public class InputInfoActivity extends AppCompatActivity {
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                System.out.println("선택이 안 되었음.");
+                Toast.makeText(getApplicationContext(), "전공 선택이 안 되었습니다.", Toast.LENGTH_LONG).show();
             }
         });
 
 
         Integer indexValue = mySpinner.getSelectedItemPosition();
-        System.out.println(indexValue);
 
         btnInputSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +84,7 @@ public class InputInfoActivity extends AppCompatActivity {
                     intent.putExtra("studentNum", etInfo.getText().toString());
                     intent.putExtra("major", retMajor);
                     intent.putExtra("retIdx", retIdx);
+                    intent.putExtra("isAbeek", isAbeek);
                     startActivity(intent);
                 }
             }

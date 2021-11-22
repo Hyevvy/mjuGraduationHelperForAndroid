@@ -181,8 +181,6 @@ public class MajorActivity extends AppCompatActivity {
 
                 if(isResultPage == false){
                     isResultPage = true;
-                    btnReturnCategory.setVisibility(INVISIBLE);
-                    btnCheckMajorInfo.setVisibility(INVISIBLE);
                     tvMent.setVisibility(INVISIBLE);
                     btnMajorInit.setVisibility(GONE);
                     layout.setVisibility(GONE);
@@ -191,13 +189,11 @@ public class MajorActivity extends AppCompatActivity {
 
                     tvAdditionalScore.setText("필수 요구학점(아직 안 받음)- "+ completedScore);
                     tvAdditionalSubjects.setText("아직 계산 안 했음");
-                    // btnMajorSubmit.setVisibility(INVISIBLE);
+
                 }
                 else {
                     //다시 원래 전공페이지로 돌려놓음
                     isResultPage = false;
-                    btnReturnCategory.setVisibility(VISIBLE);
-                    btnCheckMajorInfo.setVisibility(VISIBLE);
                     tvMent.setVisibility(VISIBLE);
                     btnMajorInit.setVisibility(VISIBLE);
                     layout.setVisibility(VISIBLE);
