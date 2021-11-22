@@ -146,7 +146,23 @@ public class categoryActivity extends AppCompatActivity {
             }
         });
 
-    } 
+        //일반 교양이 눌렸을 때
+        btnGeneralLiberal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), GeneralLiberalActivity.class);
+                intent.putExtra("major", major);
+                intent.putExtra("jsonArray", Array.toString());
+                intent.putExtra("studentNum", studentNum);
+                intent.putExtra("siteUrl",siteUrl);
+                intent.putExtra("telNumber", telNumber);
+                intent.putExtra("isAbeek", isAbeek);
+                startActivityForResult(intent, 1006);
+            }
+        });
+
+
+    }
     //돌아가기 버튼 클릭시 호출되는 콜백함수
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -169,6 +185,16 @@ public class categoryActivity extends AppCompatActivity {
             case 1004:
                 if(resultCode == RESULT_OK){
                     System.out.println("전공에서 카테고리 확인으로 돌아옴");
+                }
+                break;
+            case 1005:
+                if(resultCode == RESULT_OK){
+                    System.out.println("자유선택에서 카테고리 확인으로 돌아옴");
+                }
+                break;
+            case 1006:
+                if(resultCode == RESULT_OK){
+                    System.out.println("일반교양에서 카테고리 확인으로 돌아옴");
                 }
                 break;
         }

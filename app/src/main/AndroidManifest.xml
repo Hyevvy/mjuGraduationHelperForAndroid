@@ -24,6 +24,7 @@
         <activity android:name=".MajorActivity" android:label="명지대학교 졸업 도우미" />
         <activity android:name=".MajorInfoActivity" android:label="명지대학교 졸업 도우미"/>
         <activity android:name=".FreeActivity" android:label="명지대학교 졸업 도우미" />
+        <activity android:name=".GeneralLiberalActivity" android:label="명지대학교 졸업 도우미" />
     </application>
 
 </manifest>

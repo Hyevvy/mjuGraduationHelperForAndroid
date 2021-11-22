@@ -8,15 +8,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FreeActivity extends AppCompatActivity {
-
+public class GeneralLiberalActivity extends AppCompatActivity {
+    TextView tvGeneral;
     Button btnReturnCategory, btnCheckMajorInfo;
-    TextView tvFree;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_free);
-
+        setContentView(R.layout.activity_generalliberal);
 
         Intent inIntent = getIntent();
         Bundle datas = inIntent.getExtras();
@@ -26,23 +24,15 @@ public class FreeActivity extends AppCompatActivity {
         String telNumber = datas.getString("telNumber");
         Boolean isAbeek = datas.getBoolean("isAbeek");
 
-        tvFree = (TextView)findViewById(R.id.tvFree);
-
+        tvGeneral = (TextView)findViewById(R.id.tvGeneral);
         Integer studentNumInt = Integer.parseInt(studentNum);
-        if(isAbeek  == true){
-            //TODO : 자유 선택 학번 , 학과 별로 출력해야 함.
-           // tvFree.setText();
+        if(studentNumInt < 15){
+            //15학번 이전의 일반 교양은 졸업 조건과 관계가 없음
+            tvGeneral.setText("15학번 이전 입학생 분들은 일반 교양과 졸업 조건이 관계가 없습니다.");
         }
         else{
-            if(studentNumInt>=9 && studentNumInt<=14){
-                tvFree.setText("자유 선택에서 들어야 할 학점은 19입니다.");
-            }
-            else if(studentNumInt>=15 && studentNumInt<=18){
-                tvFree.setText("자유 선택에서 들어야 할 학점은 12입니다");
-            }
-            else if(studentNumInt > 18){
-                tvFree.setText("자유 선택에서 들어야 할 학점은 10입니다");
-            }
+            if(isAbeek) tvGeneral.setText("15학번 이후 입학생분들 중 공학인증을 하시면 \n 일반 교양 필수 졸업 학점은 0입니다.");
+            else tvGeneral.setText("15학번 이후 입학생분들 중 공학인증을 하시지않는 분들은 \n 일반 교양 필수 졸업 학점은 10입니다.");
         }
 
 
