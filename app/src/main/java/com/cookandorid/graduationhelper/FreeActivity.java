@@ -8,10 +8,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class FreeActivity extends AppCompatActivity {
 
     Button btnReturnCategory, btnCheckMajorInfo;
     TextView tvFree;
+    //컴공은 예외케이스가 많아서 제외함.
+    String[][] free = new String[][]{{"9", "10", "9~10", "9", "8", "10", "8", "10", "10"}, {"7","7","7", "7" ,"7", "14", "7", "4", "7", "7"}, {"5","5","5","5","5","5","5","2","5","5"}};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,24 +31,66 @@ public class FreeActivity extends AppCompatActivity {
 
         tvFree = (TextView)findViewById(R.id.tvFree);
 
+        //전공 idx 구하기
+        String[] majors= new String[]{"전기공학과", "전자공학과", "화학공학과", "신소재공학과","환경에너지공학과", "토목환경공학과", "교통공학과", "기계공학과", "산업경영공학과", "컴퓨터공학과"};
+        Integer majorIdx = 0;
+        for(int i=0; i<majors.length; i++){
+            if(major.equals(majors[i])){
+                majorIdx = i;
+                break;
+            }
+        }
+
+        System.out.println("major Index : " + majorIdx);
+
         Integer studentNumInt = Integer.parseInt(studentNum);
+        Integer shouldCompleteFree = 0;
         if(isAbeek  == true){
+            //공학인증을 하는 경우
             //TODO : 자유 선택 학번 , 학과 별로 출력해야 함.
-           // tvFree.setText();
+           if(majorIdx == 9){
+               //공학인증을 하는데 컴퓨터 공학과인 경우
+               if(studentNumInt >= 9 && studentNumInt <= 11) {
+                   shouldCompleteFree = 10;
+
+               }
+               else if(studentNumInt >= 12 && studentNumInt<=14) {
+                   shouldCompleteFree = 11;
+
+               }
+               else if(studentNumInt>=15 && studentNumInt<=18){
+                   shouldCompleteFree = 14;
+               }
+               else if(studentNumInt > 18){
+                   shouldCompleteFree = 12;
+               }
+           }
+           else {
+               //공학인증을 하는데 컴퓨터공학과가 아닌 경우
+               if(studentNumInt >= 9 && studentNumInt <=14){
+                    shouldCompleteFree = Integer.parseInt(free[0][majorIdx]);
+               } else if (studentNumInt >= 15 && studentNumInt <= 18) {
+                   shouldCompleteFree = Integer.parseInt(free[1][majorIdx]);
+               }
+               else{
+                   shouldCompleteFree = Integer.parseInt(free[2][majorIdx]);
+               }
+           }
         }
         else{
+            //공학인증을 하지 않는 경우
             if(studentNumInt>=9 && studentNumInt<=14){
-                tvFree.setText("자유 선택에서 들어야 할 학점은 19입니다.");
+                shouldCompleteFree = 19;
             }
             else if(studentNumInt>=15 && studentNumInt<=18){
-                tvFree.setText("자유 선택에서 들어야 할 학점은 12입니다");
+                shouldCompleteFree = 12;
             }
             else if(studentNumInt > 18){
-                tvFree.setText("자유 선택에서 들어야 할 학점은 10입니다");
+                shouldCompleteFree = 10;
             }
         }
 
-
+        tvFree.setText(shouldCompleteFree.toString());
 
 
         btnReturnCategory = (Button)findViewById(R.id.btnReturnCategory);
