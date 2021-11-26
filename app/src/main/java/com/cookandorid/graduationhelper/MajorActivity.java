@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -44,7 +45,8 @@ public class MajorActivity extends AppCompatActivity {
     LinearLayout  majorResultLayout, subjectLayout;
     boolean isResultPage = false;
     Integer isRequiredScore = 0;
-
+    String[] shouldTake;
+    Integer[] listened;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,18 +92,24 @@ public class MajorActivity extends AppCompatActivity {
         }
 
 
-
+        int j = 0;
         Toast.makeText(getApplicationContext(),major,Toast.LENGTH_LONG).show();
         LayoutParams params = new LayoutParams(MATCH_PARENT, WRAP_CONTENT);
             //배열로된 자료를 가져올때
             try {
                 Array = array;
                 Button btn;
+                listened = new Integer[Array.length()];
+                shouldTake = new String[Array.length()];
+                for(int i=0; i<Array.length(); i++) listened[i] = 0;
                 for(int i=0; i<Array.length(); i++) {
                         JSONObject subjects = Array.getJSONObject(i);
-
+                        String subjectName = subjects.getString("subjectName");
+                        if(subjects.getString("required").equals("true")){
+                            shouldTake[i] = subjectName;
+                        }
                         btn = new Button(this);
-                        btn.setText(subjects.getString("subjectName"));
+                        btn.setText(subjectName);
 
                         Log.d("-- Subject is ", subjects.getString("subjectName"));
                         btn.setId(count);
@@ -113,6 +121,7 @@ public class MajorActivity extends AppCompatActivity {
                     }
                     layout.addView(btn);
                     Button finalBtn = btn;
+                    int finalI = i;
                     btn.setOnClickListener(new View.OnClickListener(){
                         public void onClick(View v){
                                 Drawable cor = tvMent.getBackground();
@@ -123,10 +132,12 @@ public class MajorActivity extends AppCompatActivity {
                                 if(cor == btnColor){
                                     finalBtn.setBackground(layerColor);
                                     completedScore -= thisScore;
+                                    listened[finalI] = 0;
                                 }
                                 else {
                                     finalBtn.setBackground(cor);
                                     completedScore += thisScore;
+                                    listened[finalI] = 1;
                                 }
                                 Log.d("-- completedScore is ", completedScore.toString());
                             } catch (JSONException e) {
@@ -216,6 +227,12 @@ public class MajorActivity extends AppCompatActivity {
 
                     tvAdditionalSubjects.setText("아직 계산 안 했음");
 
+                    for(int i=0; i<listened.length; i++) {
+                        if(listened[i] == 0 && shouldTake[i]!=null){
+                            System.out.println(shouldTake[i]);
+                        }
+
+                    }
                 }
                 else {
                     //다시 원래 전공페이지로 돌려놓음
