@@ -41,7 +41,7 @@ public class MajorActivity extends AppCompatActivity {
     JSONArray Array, array;
     TextView tvMent, tvAdditionalScore, tvAdditionalSubjects;
     Integer completedScore = 0;//총 이수학점
-    LinearLayout  majorResultLayout;
+    LinearLayout  majorResultLayout, subjectLayout;
     boolean isResultPage = false;
     Integer isRequiredScore = 0;
 
@@ -53,7 +53,7 @@ public class MajorActivity extends AppCompatActivity {
 
 
 
-
+       // subjectLayout = (LinearLayout)findViewById(R.id.subjectLayout);
         btnReturnCategory = (Button)findViewById(R.id.btnReturnCategory);
         tvMent = (TextView)findViewById(R.id.tvMent);
         LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
@@ -204,10 +204,12 @@ public class MajorActivity extends AppCompatActivity {
 
                 if(isResultPage == false){
                     isResultPage = true;
-                    tvMent.setVisibility(INVISIBLE);
+                    tvMent.setVisibility(GONE);
                     btnMajorInit.setVisibility(GONE);
+                 //   subjectLayout.setVisibility(GONE);
                     layout.setVisibility(GONE);
                     majorResultLayout.setVisibility(VISIBLE);
+                    ((LinearLayout.LayoutParams) majorResultLayout.getLayoutParams()).weight = 1;
                     btnMajorSubmit.setText("뒤로 가기");
                     String resultScore = String.valueOf(isRequiredScore - completedScore);
                     tvAdditionalScore.setText(resultScore);

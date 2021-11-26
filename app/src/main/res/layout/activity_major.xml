@@ -32,44 +32,54 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="들은 과목을 모두 선택해주세요"
-        android:padding="15dp"
-        android:id="@+id/tvMent"
-        android:background="#ffffcc"
-        android:textSize="25sp"
-        android:gravity="center"
-        />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:id="@+id/majorScroll"
-        >
-
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/majorSubjectBtn0"
-            android:orientation="vertical"
+            android:text="들은 과목을 모두 선택해주세요"
+            android:padding="15dp"
+            android:id="@+id/tvMent"
+            android:background="#ffffcc"
+            android:textSize="25sp"
+            android:gravity="center"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/majorScroll"
             >
 
-        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/majorSubjectBtn0"
+                android:orientation="vertical"
+                >
 
-    </ScrollView>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
-       android:layout_weight="1"
         android:layout_height="match_parent"
         android:visibility="gone"
         android:id="@+id/majorResultLayout"
         android:orientation="vertical">
         <TextView
-            android:textSize="25sp"
+            android:gravity="center"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="추가로 들어야 할 학점은 "
@@ -80,15 +90,21 @@
             android:orientation="horizontal">
             <TextView
                 android:textColor="@color/red"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:id="@+id/tvAdditionalScore"
-                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="23sp"
+                android:layout_margin="20dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:gravity="center"
+                android:textSize="23sp"
+                android:textColor="@color/black"
+                android:layout_margin="20dp"
                 android:text=" 입니다." />
 
         </LinearLayout>
