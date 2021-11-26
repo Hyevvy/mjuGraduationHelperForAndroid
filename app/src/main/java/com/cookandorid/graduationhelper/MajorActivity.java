@@ -8,13 +8,17 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.provider.Settings;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +32,7 @@ import org.xml.sax.Parser;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import static android.view.ViewGroup.*;
 import static android.view.ViewGroup.LayoutParams.*;
@@ -47,15 +52,24 @@ public class MajorActivity extends AppCompatActivity {
     Integer isRequiredScore = 0;
     String[] shouldTake;
     Integer[] listened;
+    String[] subjectsString;
+
+    private List<String> list;          // 데이터를 넣은 리스트변수
+    private ListView listView;          // 검색을 보여줄 리스트변수
+    private EditText editSearch;        // 검색어를 입력할 Input 창
+    private SearchAdapter adapter;      // 리스트뷰에 연결할 아답터
+    private ArrayList<String> arraylist;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_major);
 
 
+        editSearch = (EditText) findViewById(R.id.editSearch);
+        listView = (ListView) findViewById(R.id.listView);
 
-
-       // subjectLayout = (LinearLayout)findViewById(R.id.subjectLayout);
+        // subjectLayout = (LinearLayout)findViewById(R.id.subjectLayout);
         btnReturnCategory = (Button)findViewById(R.id.btnReturnCategory);
         tvMent = (TextView)findViewById(R.id.tvMent);
         LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
@@ -93,7 +107,7 @@ public class MajorActivity extends AppCompatActivity {
 
 
         int j = 0;
-        Toast.makeText(getApplicationContext(),major,Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(),major,Toast.LENGTH_LONG).show();
         LayoutParams params = new LayoutParams(MATCH_PARENT, WRAP_CONTENT);
             //배열로된 자료를 가져올때
             try {
@@ -101,7 +115,13 @@ public class MajorActivity extends AppCompatActivity {
                 Button btn;
                 listened = new Integer[Array.length()];
                 shouldTake = new String[Array.length()];
-                for(int i=0; i<Array.length(); i++) listened[i] = 0;
+                subjectsString = new String[Array.length()];
+                for(int i=0; i<Array.length(); i++) {
+                    listened[i] = 0;
+                    JSONObject subjects = Array.getJSONObject(i);
+                    String subjectName = subjects.getString("subjectName");
+                    subjectsString[i] = subjectName;
+                }
                 for(int i=0; i<Array.length(); i++) {
                         JSONObject subjects = Array.getJSONObject(i);
                         String subjectName = subjects.getString("subjectName");
@@ -130,11 +150,13 @@ public class MajorActivity extends AppCompatActivity {
                             try {
                                 Integer thisScore = Integer.parseInt(subjects.getString("score"));
                                 if(cor == btnColor){
+                                    //버튼 선택 취소
                                     finalBtn.setBackground(layerColor);
                                     completedScore -= thisScore;
                                     listened[finalI] = 0;
                                 }
                                 else {
+                                    //버튼 선택
                                     finalBtn.setBackground(cor);
                                     completedScore += thisScore;
                                     listened[finalI] = 1;
@@ -219,7 +241,6 @@ public class MajorActivity extends AppCompatActivity {
                     btnMajorInit.setVisibility(GONE);
                     layout.setVisibility(GONE);
                     majorResultLayout.setVisibility(VISIBLE);
-                  //  ((LinearLayout.LayoutParams) majorResultLayout.getLayoutParams()).weight = 1;
                     btnMajorSubmit.setText("뒤로 가기");
                     String resultScore = String.valueOf(isRequiredScore - completedScore);
                     tvAdditionalScore.setText(resultScore);
@@ -244,5 +265,76 @@ public class MajorActivity extends AppCompatActivity {
 
             }
         });
+
+
+        list = new ArrayList<String>();
+
+        settingList();
+        arraylist = new ArrayList<String>();
+        arraylist.addAll(list);
+        adapter = new SearchAdapter(list, this);
+        listView.setAdapter(adapter);
+
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                // input창에 문자를 입력할때마다 호출된다.
+                // search 메소드를 호출한다.
+                String text = editSearch.getText().toString();
+                search(text);
+            }
+        });
+
+
+
+    }
+
+
+
+
+    //검색을 수행
+    public void search(String charText) {
+
+        // 문자 입력시마다 리스트를 지우고 새로 뿌려준다.
+        list.clear();
+
+        if (charText.length() == 0) {
+            //입력이 없을 때는 아무런 데이터도 출력하지 않는다.
+            listView.setVisibility(GONE);
+        }
+        // 문자 입력을 할때..
+        else
+        {
+            // 리스트의 모든 데이터를 검색한다.
+            for(int i = 0;i < arraylist.size(); i++)
+            {
+                // arraylist의 모든 데이터에 입력받은 단어(charText)가 포함되어 있으면 true를 반환한다.
+                if (arraylist.get(i).toLowerCase().contains(charText))
+                {
+                    // 검색된 데이터를 리스트에 추가한다.
+                    list.add(arraylist.get(i));
+                }
+            }
+        }
+        // 리스트 데이터가 변경되었으므로 아답터를 갱신하여 검색된 데이터를 화면에 보여준다.
+        adapter.notifyDataSetChanged();
+        listView.setVisibility(VISIBLE);
+    }
+
+    //검색에 사용될 데이터를 리스트에 추가
+    private void settingList() {
+        for(int i=0; i<subjectsString.length; i++){
+            list.add(subjectsString[i]);
+        }
+
     }
 }

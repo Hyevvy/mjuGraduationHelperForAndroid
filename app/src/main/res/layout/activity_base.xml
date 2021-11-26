@@ -17,6 +17,7 @@
             android:id="@+id/btnReturnCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:fontFamily="@font/bmdohyun"
             android:text="다른 카테고리 확인하기"/>
 
@@ -24,6 +25,7 @@
             android:id="@+id/btnCheckMajorInfo"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_margin="10dp"
             android:fontFamily="@font/bmdohyun"
             android:text="학과 정보 확인하기"
             />

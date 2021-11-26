@@ -33,7 +33,31 @@
     </LinearLayout>
 
 
-        <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/editSearch"
+            android:fontFamily="@font/bmdohyun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="검색어를 입력하세요."/>
+        <ListView
+            android:id="@+id/listView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#999999"
+            android:dividerHeight="1dp">
+        </ListView>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="들은 과목을 모두 선택해주세요"
@@ -61,7 +85,6 @@
             </LinearLayout>
 
         </ScrollView>
-
 
 
 
