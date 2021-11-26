@@ -43,7 +43,7 @@ public class MajorActivity extends AppCompatActivity {
     Integer completedScore = 0;//총 이수학점
     LinearLayout  majorResultLayout;
     boolean isResultPage = false;
-
+    Integer isRequiredScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +74,23 @@ public class MajorActivity extends AppCompatActivity {
         String telNumber = datas.getString("telNumber");
         String siteUrl = datas.getString("siteUrl");
         int studentNumInt = Integer.parseInt(studentNum);
+        if(studentNumInt>=9 && studentNumInt<=14){
+            if(studentNumInt == 12 && major.equals("컴퓨터공학과")){
+                isRequiredScore = 84;
+            }
+            else isRequiredScore = 70;
+        }
+        else if(studentNumInt>=15 && studentNumInt<=18){
+            if(major.equals("컴퓨터공학과")) isRequiredScore = 84;
+            else isRequiredScore = 70;
+        }
+        else if(studentNumInt >= 18)  {
+            if(major.equals("컴퓨터공학과")) isRequiredScore = 74;
+            else isRequiredScore = 70;
+        }
+
+
+
         Toast.makeText(getApplicationContext(),major,Toast.LENGTH_LONG).show();
         LayoutParams params = new LayoutParams(MATCH_PARENT, WRAP_CONTENT);
             //배열로된 자료를 가져올때
@@ -170,7 +187,6 @@ public class MajorActivity extends AppCompatActivity {
                 for(int i=0; i<childs; i++) {
                     v = parentLayout.getChildAt(i);
                     v.setBackground(layerColor);
-                    //do something with your child element
                 }
             }
         });
@@ -193,8 +209,9 @@ public class MajorActivity extends AppCompatActivity {
                     layout.setVisibility(GONE);
                     majorResultLayout.setVisibility(VISIBLE);
                     btnMajorSubmit.setText("뒤로 가기");
+                    String resultScore = String.valueOf(isRequiredScore - completedScore);
+                    tvAdditionalScore.setText(resultScore);
 
-                    tvAdditionalScore.setText("필수 요구학점(아직 안 받음)- "+ completedScore);
                     tvAdditionalSubjects.setText("아직 계산 안 했음");
 
                 }

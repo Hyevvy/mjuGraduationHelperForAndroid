@@ -28,11 +28,11 @@ public class GeneralLiberalActivity extends AppCompatActivity {
         Integer studentNumInt = Integer.parseInt(studentNum);
         if(studentNumInt < 15){
             //15학번 이전의 일반 교양은 졸업 조건과 관계가 없음
-            tvGeneral.setText("15학번 이전 입학생 분들은 일반 교양과 졸업 조건이 관계가 없습니다.");
+            tvGeneral.setText("졸업조건과 관계 없는 ");
         }
         else{
-            if(isAbeek) tvGeneral.setText("15학번 이후 입학생분들 중 공학인증을 하시면 \n 일반 교양 필수 졸업 학점은 0입니다.");
-            else tvGeneral.setText("15학번 이후 입학생분들 중 공학인증을 하시지않는 분들은 \n 일반 교양 필수 졸업 학점은 10입니다.");
+            if(isAbeek) tvGeneral.setText("0 ");
+            else tvGeneral.setText("10 ");
         }
 
 

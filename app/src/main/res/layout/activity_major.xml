@@ -69,22 +69,39 @@
         android:id="@+id/majorResultLayout"
         android:orientation="vertical">
         <TextView
+            android:textSize="25sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="추가로 들어야 할 학점은 "
             />
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvAdditionalScore"
-            />
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAdditionalScore"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text=" 입니다." />
+
+        </LinearLayout>
+
 
         <TextView
+            android:textSize="25sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="추가로 들어야 할 과목은 "
             />
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvAdditionalSubjects"
