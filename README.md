@@ -9,19 +9,30 @@
 </p>
 
 
-
-### 주요 기능
-1. 
+***
 
 
+### 상세 설명
+![detail 1](https://user-images.githubusercontent.com/72402747/143535119-b0f719fa-8c87-42d4-8bab-589e0bb06197.png)
+
+![detail 2](https://user-images.githubusercontent.com/72402747/143534760-15fe94e1-95d1-4795-aeff-ed300b201c6f.png)
+
+![detail 3](https://user-images.githubusercontent.com/72402747/143534764-5ec668a1-3755-4bc0-82b2-1f5981938dde.png)
+
+![detail 4](https://user-images.githubusercontent.com/72402747/143534770-c41910d5-3d6a-4bed-a47a-182090715bbb.png)
+
+ 
+
+***
+### 시연 영상
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/72402747/143532622-8a24a74c-3d68-4923-aeb6-22566823f69b.gif)
 
 
-
+***
 ### Q&A
 * https://github.com/Hyevvy/mjuGraduationHelperForAndroid/issues
 
 
-
+***
 ### Dependencies
 * 명지대학교 졸업도우미는 Android Studio 4.1 & Android SDK 30 환경에서 개발되었습니다.
