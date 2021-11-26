@@ -29,6 +29,13 @@
 
 
 ***
+### 검색 필터링 기능 구현
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/72402747/143594940-4629b40a-7e2a-4452-8281-af83f22b1e96.gif)
+
+사용자가 원하는 과목을 찾기 쉽게 검색창에 과목명의 일부만 입력해도 그 과목명 버튼 색깔이 빨간색으로 변하게 구현하였습니다.
+
+
+***
 ### Q&A
 * https://github.com/Hyevvy/mjuGraduationHelperForAndroid/issues
 
