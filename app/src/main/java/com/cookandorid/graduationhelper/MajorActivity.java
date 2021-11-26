@@ -211,28 +211,26 @@ public class MajorActivity extends AppCompatActivity {
         btnMajorSubmit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //TODO : 추가로 들어야하는 학점, 추가로 들어야하는 과목 출력
+                //추가로 들어야하는 학점, 추가로 들어야하는 과목 출력
 
                 if(isResultPage == false){
                     isResultPage = true;
                     tvMent.setVisibility(GONE);
                     btnMajorInit.setVisibility(GONE);
-                 //   subjectLayout.setVisibility(GONE);
                     layout.setVisibility(GONE);
                     majorResultLayout.setVisibility(VISIBLE);
-                    ((LinearLayout.LayoutParams) majorResultLayout.getLayoutParams()).weight = 1;
+                  //  ((LinearLayout.LayoutParams) majorResultLayout.getLayoutParams()).weight = 1;
                     btnMajorSubmit.setText("뒤로 가기");
                     String resultScore = String.valueOf(isRequiredScore - completedScore);
                     tvAdditionalScore.setText(resultScore);
 
-                    tvAdditionalSubjects.setText("아직 계산 안 했음");
-
+                    String result = "";
                     for(int i=0; i<listened.length; i++) {
                         if(listened[i] == 0 && shouldTake[i]!=null){
-                            System.out.println(shouldTake[i]);
+                            result += shouldTake[i] + "\n";
                         }
-
                     }
+                    tvAdditionalSubjects.setText(result);
                 }
                 else {
                     //다시 원래 전공페이지로 돌려놓음
