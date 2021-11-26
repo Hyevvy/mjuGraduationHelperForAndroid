@@ -8,14 +8,20 @@
   <img src="https://user-images.githubusercontent.com/72402747/143530663-ca95f4ae-192b-4784-9fd0-086939b3006f.png" width="300" height="300" />
 </p>
 
----
+
 
 ### 주요 기능
 1. 
 
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/72402747/143532622-8a24a74c-3d68-4923-aeb6-22566823f69b.gif)
+
+
+
 ### Q&A
 * https://github.com/Hyevvy/mjuGraduationHelperForAndroid/issues
+
+
 
 ### Dependencies
 * 명지대학교 졸업도우미는 Android Studio 4.1 & Android SDK 30 환경에서 개발되었습니다.
