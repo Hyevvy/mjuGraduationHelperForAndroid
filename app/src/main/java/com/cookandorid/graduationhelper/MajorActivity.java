@@ -46,12 +46,12 @@ public class MajorActivity extends AppCompatActivity {
     JSONObject jsonObject;
     JSONArray Array, array;
     TextView tvMent, tvAdditionalScore, tvAdditionalSubjects;
-    Integer completedScore = 0;//총 이수학점
+    Integer completedScore = 0, idxCurr = 0;//총 이수학점
     LinearLayout  majorResultLayout, subjectLayout;
     boolean isResultPage = false;
     Integer isRequiredScore = 0;
     String[] shouldTake;
-    Integer[] listened;
+    Integer[] listened, changeResultInt;
     String[] subjectsString;
 
     private List<String> list;          // 데이터를 넣은 리스트변수
@@ -115,6 +115,7 @@ public class MajorActivity extends AppCompatActivity {
                 Button btn;
                 listened = new Integer[Array.length()];
                 shouldTake = new String[Array.length()];
+                changeResultInt = new Integer[Array.length()];
                 subjectsString = new String[Array.length()];
                 for(int i=0; i<Array.length(); i++) {
                     listened[i] = 0;
@@ -142,6 +143,9 @@ public class MajorActivity extends AppCompatActivity {
                     layout.addView(btn);
                     Button finalBtn = btn;
                     int finalI = i;
+
+
+
                     btn.setOnClickListener(new View.OnClickListener(){
                         public void onClick(View v){
                                 Drawable cor = tvMent.getBackground();
@@ -178,6 +182,8 @@ public class MajorActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
+
 
 
 
@@ -300,7 +306,6 @@ public class MajorActivity extends AppCompatActivity {
 
 
 
-
     //검색을 수행
     public void search(String charText) {
 
@@ -310,6 +315,12 @@ public class MajorActivity extends AppCompatActivity {
         if (charText.length() == 0) {
             //입력이 없을 때는 아무런 데이터도 출력하지 않는다.
             listView.setVisibility(GONE);
+            LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
+            for(int j=0;j<layout.getChildCount();j++)
+            {
+                    Button b =(Button)layout.getChildAt(j);
+                    b.setTextColor(Color.BLACK);
+            }
         }
         // 문자 입력을 할때..
         else
@@ -320,6 +331,16 @@ public class MajorActivity extends AppCompatActivity {
                 // arraylist의 모든 데이터에 입력받은 단어(charText)가 포함되어 있으면 true를 반환한다.
                 if (arraylist.get(i).toLowerCase().contains(charText))
                 {
+
+                    LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
+                    for(int j=0;j<layout.getChildCount();j++)
+                    {
+                        if(i == j) {
+                            Button b =(Button)layout.getChildAt(j);
+                            b.setTextColor(Color.RED);
+                        }
+                    }
+                   // changeResultInt[idxCurr++] = i;
                     // 검색된 데이터를 리스트에 추가한다.
                     list.add(arraylist.get(i));
                 }
