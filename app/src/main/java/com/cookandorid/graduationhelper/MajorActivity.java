@@ -74,7 +74,7 @@ public class MajorActivity extends AppCompatActivity {
         tvMent = (TextView)findViewById(R.id.tvMent);
         LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
 
-        int count  = 0; //생성된 버튼의 개수
+        Integer count  = 0; //생성된 버튼의 개수
         Intent inIntent = getIntent();
         Bundle datas = inIntent.getExtras();
         String jsonArray = inIntent.getStringExtra("jsonArray");
@@ -309,13 +309,19 @@ public class MajorActivity extends AppCompatActivity {
     //검색을 수행
     public void search(String charText) {
 
+        LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
         // 문자 입력시마다 리스트를 지우고 새로 뿌려준다.
         list.clear();
+        for(int j=0;j<layout.getChildCount();j++)
+        {
+            Button b =(Button)layout.getChildAt(j);
+            b.setTextColor(Color.BLACK);
+        }
 
         if (charText.length() == 0) {
             //입력이 없을 때는 아무런 데이터도 출력하지 않는다.
             listView.setVisibility(GONE);
-            LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
+
             for(int j=0;j<layout.getChildCount();j++)
             {
                     Button b =(Button)layout.getChildAt(j);
@@ -332,15 +338,18 @@ public class MajorActivity extends AppCompatActivity {
                 if (arraylist.get(i).toLowerCase().contains(charText))
                 {
 
-                    LinearLayout layout = (LinearLayout)findViewById(R.id.majorSubjectBtn0);
                     for(int j=0;j<layout.getChildCount();j++)
                     {
-                        if(i == j) {
-                            Button b =(Button)layout.getChildAt(j);
+                        Button b = (Button)layout.getChildAt(j);
+                        if(b.getText().toString().contains(charText)){
                             b.setTextColor(Color.RED);
                         }
+
+                        else {
+                            b.setTextColor(Color.BLACK);
+                        }
+
                     }
-                   // changeResultInt[idxCurr++] = i;
                     // 검색된 데이터를 리스트에 추가한다.
                     list.add(arraylist.get(i));
                 }
