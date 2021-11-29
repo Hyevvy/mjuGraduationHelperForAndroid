@@ -1,6 +1,8 @@
 package com.cookandorid.graduationhelper;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,52 +29,35 @@ public class BaseActivity extends AppCompatActivity {
         String studentNum = datas.getString("studentNum");
         String siteUrl = datas.getString("siteUrl");
         String telNumber = datas.getString("telNumber");
+        Boolean isAbeek = datas.getBoolean("isAbeek");
+
         int studentNumInt = Integer.parseInt(studentNum);
         String fileString="";
-        for(int i=0; i<majors.length; i++){
-            System.out.println("major :" + major );
-            System.out.println(" majors[" + i +"] :" + majors[i] );
+        System.out.println(" majors.length :" + majors.length );
 
-            if(majors[i].equals(major)){
-                System.out.println(" i :" + i );
-                if(studentNumInt >= 18)
-                    fileString = "base_" + i;
-                else{
-//                    if(i == 9) { //컴공일때
-//                        if (studentNumInt >= 18) {
-//                            fileString = "base_" + i;
-//                        } else if (studentNumInt >= 15 && studentNumInt <= 17) {
-//                            imgViewBase.setImageResource(R.drawable.base_fifteen_to_seventeen_cs);
-//                        } else if (studentNumInt >= 12 && studentNumInt <= 14) {
-//                            imgViewBase.setImageResource(R.drawable.base_twelve_to_fourteen_cs);
-//                        } else if (studentNumInt >= 10 && studentNumInt <= 11) {
-//                            imgViewBase.setImageResource(R.drawable.base_ten_to_eleven_cs);
-//                        } else if (studentNumInt == 9) {
-//                            imgViewBase.setImageResource(R.drawable.base_nine_cs);
-//                        }
-//                    }
+        if(!isAbeek) fileString = "base_isabeek";
+        else {
+            for (int i = 0; i < majors.length; i++) {
+                System.out.println(" major :" + major);
+                System.out.println(" majors" + i +" :" + majors[i]);
+                if (majors[i].equals(major)) {
+                    System.out.println(" i :" + i);
+                    if (studentNumInt >= 18)
+                        fileString = "base_" + i + "_18";
+                    else {
+                        //TODO : 컴공은 예외처리해줘야함.
+                        fileString = "base_" + i;
+                    }
                 }
-            }
-            System.out.println(fileString);
-        } //close - for
 
-        //학번 별로 다른 공통 교양 이미지 출력
-        if(studentNumInt >= 18) {
-            imgViewBase.setImageResource(R.drawable.base_aftereighteen);
+                System.out.println(fileString);
+            } //close - for
         }
-//        else if(studentNumInt>=15 && studentNumInt<=17 ){
-//            imgViewBase.setImageResource(R.drawable.base_fifteen_to_seventeen_cs);
-//        }
-//        else if(studentNumInt>=12 && studentNumInt<=14){
-//            imgViewBase.setImageResource(R.drawable.base_twelve_to_fourteen_cs);
-//        }
-//        else if(studentNumInt>=10 && studentNumInt<=11 ){
-//            imgViewBase.setImageResource(R.drawable.base_ten_to_eleven_cs);
-//        }
-//
-//        else if(studentNumInt == 9){
-//            imgViewBase.setImageResource(R.drawable.base_nine_cs);
-//        }
+        int imageResource = getResources().getIdentifier(fileString, "drawable", getPackageName());
+
+        Drawable image = getResources().getDrawable(imageResource);
+        imgViewBase.setImageDrawable(image);
+
 
         btnReturnCategory = (Button)findViewById(R.id.btnReturnCategory);
 

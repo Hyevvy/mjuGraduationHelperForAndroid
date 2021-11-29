@@ -113,6 +113,7 @@ public class categoryActivity extends AppCompatActivity {
                 intent.putExtra("studentNum", studentNum);
                 intent.putExtra("siteUrl",siteUrl);
                 intent.putExtra("telNumber", telNumber);
+                intent.putExtra("isAbeek", isAbeek);
                 startActivityForResult(intent, 1003);
             }
         });
