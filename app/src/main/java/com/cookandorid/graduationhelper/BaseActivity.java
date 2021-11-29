@@ -38,19 +38,23 @@ public class BaseActivity extends AppCompatActivity {
         if(!isAbeek) fileString = "base_isabeek";
         else {
             for (int i = 0; i < majors.length; i++) {
-                System.out.println(" major :" + major);
-                System.out.println(" majors" + i +" :" + majors[i]);
+
                 if (majors[i].equals(major)) {
                     System.out.println(" i :" + i);
                     if (studentNumInt >= 18)
                         fileString = "base_" + i + "_18";
                     else {
-                        //TODO : 컴공은 예외처리해줘야함.
-                        fileString = "base_" + i;
+                        if(i == 9){
+                            //컴공인 경우는 예외
+                            if(studentNumInt == 9 )fileString = "base_9_9";
+                            else if(studentNumInt>=10 && studentNumInt<=11) fileString = "base_9_10";
+                            else if(studentNumInt>=12 && studentNumInt<=14) fileString = "base_9_12";
+                            else if(studentNumInt>=15 && studentNumInt<=17) fileString = "base_9_15";
+                        }
+                        else fileString = "base_" + i;
                     }
                 }
 
-                System.out.println(fileString);
             } //close - for
         }
         int imageResource = getResources().getIdentifier(fileString, "drawable", getPackageName());
