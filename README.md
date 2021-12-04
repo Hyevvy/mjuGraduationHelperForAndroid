@@ -40,6 +40,15 @@
 
 
 ***
+### 졸업도우미 1.0.0 버전
+
+![image](https://user-images.githubusercontent.com/72402747/144699681-cad42cce-81ac-4da0-b570-9e5899c5d228.png)
+
+구글 플레이스토어에서 "명지대학교 졸업도우미"를 검색하면 1.0.0 버전을 다운받을 수 있습니다.
+
+
+
+***
 ### Q&A
 
 * https://github.com/Hyevvy/mjuGraduationHelperForAndroid/issues
