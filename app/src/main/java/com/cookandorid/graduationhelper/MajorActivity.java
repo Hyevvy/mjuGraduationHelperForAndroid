@@ -80,7 +80,7 @@ public class MajorActivity extends AppCompatActivity {
         String jsonArray = inIntent.getStringExtra("jsonArray");
         try {
             array = new JSONArray(jsonArray);
-            System.out.println(array.toString(2));
+          //  System.out.println(array.toString(2));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -132,7 +132,6 @@ public class MajorActivity extends AppCompatActivity {
                         btn = new Button(this);
                         btn.setText(subjectName);
 
-                        Log.d("-- Subject is ", subjects.getString("subjectName"));
                         btn.setId(count);
                         count++;
                         btn.setLayoutParams(params);
@@ -236,12 +235,14 @@ public class MajorActivity extends AppCompatActivity {
         majorResultLayout = (LinearLayout)findViewById(R.id.majorResultLayout);
 
 
+        //선택완료 버튼 누름
         btnMajorSubmit.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 //추가로 들어야하는 학점, 추가로 들어야하는 과목 출력
 
                 if(isResultPage == false){
+                    editSearch.setVisibility(GONE);
                     isResultPage = true;
                     tvMent.setVisibility(GONE);
                     btnMajorInit.setVisibility(GONE);
@@ -260,6 +261,7 @@ public class MajorActivity extends AppCompatActivity {
                     tvAdditionalSubjects.setText(result);
                 }
                 else {
+                    editSearch.setVisibility(VISIBLE);
                     //다시 원래 전공페이지로 돌려놓음
                     isResultPage = false;
                     tvMent.setVisibility(VISIBLE);
