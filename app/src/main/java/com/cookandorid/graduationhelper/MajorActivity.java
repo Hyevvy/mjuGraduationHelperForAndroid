@@ -336,14 +336,16 @@ public class MajorActivity extends AppCompatActivity {
             // 리스트의 모든 데이터를 검색한다.
             for(int i = 0;i < arraylist.size(); i++)
             {
+                String lowerCharText = charText.toLowerCase();
+                String upperCharText = charText.toUpperCase();
                 // arraylist의 모든 데이터에 입력받은 단어(charText)가 포함되어 있으면 true를 반환한다.
-                if (arraylist.get(i).toLowerCase().contains(charText))
+                if (arraylist.get(i).toLowerCase().contains(lowerCharText) || arraylist.get(i).toUpperCase().contains(upperCharText))
                 {
-
+                    Log.d("-- Here ", "yes");
                     for(int j=0;j<layout.getChildCount();j++)
                     {
                         Button b = (Button)layout.getChildAt(j);
-                        if(b.getText().toString().contains(charText)){
+                        if(b.getText().toString().contains(lowerCharText) ||b.getText().toString().contains(upperCharText) ){
                             b.setTextColor(Color.RED);
                         }
 
