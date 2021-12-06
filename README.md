@@ -1,4 +1,16 @@
 # 명지대학교 졸업 도우미
+
+## 목차
+* [프로젝트 소개](#프로젝트-소개)
+* [상세 설명](#상세-설명)
+* [시연 영상](#시연-영상)
+* [검색 필터링 구현](#검색-필터링-기능-구현)
+* [졸업도우미 1.0.0 버전 다운받기](#졸업도우미-다운받기)
+* [Q&A](#qa)
+* [Dependencies](#dependencies)
+
+</br>
+
 ### 프로젝트 소개
 
 * 입학연도, 전공별로 각기 다른 졸업 조건을 한 눈에 확인할 수 있습니다.
@@ -10,9 +22,10 @@
 </p>
 
 
+
+</br>
+
 ***
-
-
 ### 상세 설명
 
 ![detail 1](https://user-images.githubusercontent.com/72402747/143535119-b0f719fa-8c87-42d4-8bab-589e0bb06197.png)
@@ -25,11 +38,16 @@
 
  
 
+</br>
+
 ***
 ### 시연 영상
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/72402747/143532622-8a24a74c-3d68-4923-aeb6-22566823f69b.gif)
 
+
+
+</br>
 
 ***
 ### 검색 필터링 기능 구현
@@ -39,11 +57,27 @@
 사용자가 원하는 과목을 찾기 쉽게 검색창에 과목명의 일부만 입력해도 그 과목명 버튼 색깔이 빨간색으로 변하게 구현하였습니다.
 
 
+</br>
+
+***
+### 졸업도우미 다운받기
+
+![image](https://user-images.githubusercontent.com/72402747/144699681-cad42cce-81ac-4da0-b570-9e5899c5d228.png)
+
+구글 플레이스토어에서 **"명지대학교 졸업도우미"** 를 검색하면 1.0.0 버전을 다운받을 수 있습니다.
+
+
+
+</br>
+
+
 ***
 ### Q&A
 
 * https://github.com/Hyevvy/mjuGraduationHelperForAndroid/issues
 
+
+</br>
 
 ***
 ### Dependencies
